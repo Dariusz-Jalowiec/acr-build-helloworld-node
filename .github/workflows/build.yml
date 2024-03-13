@@ -6,8 +6,6 @@ on:
       - master
       - task-*
       - feature-*
-      - issue-*
-      - poc-*
 
 
 jobs:
