@@ -15,7 +15,8 @@ jobs:
     name: Release
     runs-on: arc-runner-set
     steps: 
-      - az acr login --username token --password ajc9zNkOsJTrGY7pdPqiEVhCqHpbGvENvq/OHDzxI2+ACRDy+W1j --name imagecontainerregistrydariusz
-      - az acr build --registry imagecontainerregistrydariusz --image helloacrtasks:v1 .
+      - run: |
+          az acr login --username token --password ajc9zNkOsJTrGY7pdPqiEVhCqHpbGvENvq/OHDzxI2+ACRDy+W1j --name imagecontainerregistrydariusz
+          az acr build --registry imagecontainerregistrydariusz --image helloacrtasks:v1 .
 
   
