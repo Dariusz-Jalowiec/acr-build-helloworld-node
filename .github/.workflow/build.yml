@@ -1,0 +1,18 @@
+name: Release
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - task-*
+      - feature-*
+      - issue-*
+      - poc-*
+
+
+jobs:
+  build:
+    - az acr login --username token --password ajc9zNkOsJTrGY7pdPqiEVhCqHpbGvENvq/OHDzxI2+ACRDy+W1j --name imagecontainerregistrydariusz
+    - az acr build --registry imagecontainerregistrydariusz --image helloacrtasks:v1 .
+    
+  
