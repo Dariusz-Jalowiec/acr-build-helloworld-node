@@ -13,6 +13,7 @@ jobs:
     name: Release
     runs-on: arc-runner-set
     steps:  
+    - run: sudo apt-get install systemd  
     - run: sudo systemctl start docker         
     - run: docker run --help         
     - name: Azure CLI script
